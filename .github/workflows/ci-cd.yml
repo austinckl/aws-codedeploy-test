@@ -38,10 +38,10 @@ jobs:
       matrix:
         python-version: [3.8]
         node-version: ['12.x']
-        appname: ['cicd-test-20210121']
+        appname: ['aws-codedeploy']
         deploy-group: ['staging']
         s3-bucket: ['	austin-cicd-test-20210121']
-        s3-filename: ['staging-cicd-test-20210121-${{ github.sha }}']
+        s3-filename: ['staging-aws-codedeploy-${{ github.sha }}']
 
     needs: buildAndTest
     steps:
