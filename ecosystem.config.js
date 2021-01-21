@@ -3,8 +3,7 @@ module.exports = {
     {
       name: 'aws-codedeploy',
       script: './app.js',
-      // args: 'serve -s build -l 3000 -n',
-      interpreter: 'none',
+      watch: true,
       env: {
         NODE_ENV: 'development',
       },
