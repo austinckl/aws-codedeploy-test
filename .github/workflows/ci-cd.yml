@@ -26,10 +26,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Install project dependencies, test and build
-      - name: Install dependencies
-        run: npm install
-      - name: Run build
-        run: npm run build
+      # - name: Install dependencies
+      #   run: npm install
+      # - name: Run build
+      #   run: npm run build
 
   deploy:
     name: CD Pipeline
@@ -54,10 +54,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Install project dependencies and build
-      - name: Install dependencies
-        run: npm install
-      - name: Run build
-        run: npm run build
+      # - name: Install dependencies
+      #   run: npm install
+      # - name: Run build
+      #   run: npm run build
 
       # Install AWS CLI 2
       - name: Install AWS CLI 2
