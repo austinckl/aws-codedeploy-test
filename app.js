@@ -1,14 +1,15 @@
-const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-const hostname = 'localhost';
-const port = 3000;
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Josh!\n');
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Hello Josh!`);
+app.listen(3000, async () => {
+  console.log('Listening on 3000');
 });
